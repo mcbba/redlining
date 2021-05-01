@@ -224,10 +224,11 @@ $(window).on('load', function() {
       var mediaType = mediaTypes[mediaExt];
 
       if (mediaType) {
-        media = $('<' + mediaType + '>', {
-          src: c['Media Link'],
-          controls: mediaType === 'audio' ? 'controls' : '',
-          alt: c['Chapter']
+    //    media = $('<' + mediaType + '>', {
+          media = $('<img>', {
+          src: c['Media Link']//,
+       //   controls: mediaType === 'audio' ? 'controls' : '',
+     //     alt: c['Chapter']
         });
 
         var enableLightbox = getSetting('_enableLightbox') === 'yes' ? true : false;
