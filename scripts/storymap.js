@@ -225,7 +225,7 @@ $(window).on('load', function() {
 
       if (mediaType) {
           media = $('<' + mediaType + '>', {
-          src: c['Media Link']//,
+          src: c['Media Link'],
           controls: mediaType === 'audio' ? 'controls' : '',
           alt: c['Chapter']
         });
