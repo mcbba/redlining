@@ -87,7 +87,6 @@ $(window).on('load', function() {
     L.tileLayer.provider(basemap, {
       maxZoom: 18
     }).addTo(map);
-    map.attributionControl.addAttribution('Tiles &copy; Esri &mdash; Source: Esri');
   }
 
   function initMap(options, chapters) {
