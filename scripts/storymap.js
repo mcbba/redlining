@@ -306,9 +306,9 @@ $(window).on('load', function() {
           }
 
           // Remove GeoJson Overlay tile layer if needed
-          if (map.hasLayer(geoJsonOverlay)) {
-            map.removeLayer(geoJsonOverlay);
-          }
+    //      if (map.hasLayer(geoJsonOverlay)) {
+      //      map.removeLayer(geoJsonOverlay);
+        //  }
 
           var c = chapters[i];
 
