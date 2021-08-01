@@ -1,7 +1,7 @@
 $(window).on('load', function() {
   var documentSettings = {};
 
-  // Some constants, such as default settings
+  // Some constants, such as default setting
   const CHAPTER_ZOOM = 15;
 
   // First, try reading Options.csv
@@ -304,7 +304,7 @@ $(window).on('load', function() {
           if (map.hasLayer(overlay)) {
             map.removeLayer(overlay);
           }
-
+//MAJOR EDIT - REMOVED JSON REMOVE FUNCTION
           // Remove GeoJson Overlay tile layer if needed
     //      if (map.hasLayer(geoJsonOverlay)) {
       //      map.removeLayer(geoJsonOverlay);
@@ -373,7 +373,7 @@ $(window).on('load', function() {
             var zoom = c['Zoom'] ? c['Zoom'] : CHAPTER_ZOOM;
             map.flyTo([c['Latitude'], c['Longitude']], zoom, {
               animate: true,
-              duration: 3, // default is 2 seconds
+              duration: 3, // default is 2 seconds, I changed to 3 for MCBBA
             });
           }
 
