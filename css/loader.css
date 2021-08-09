@@ -22,8 +22,8 @@
 .loader {
   color: #000;
   text-indent: -9999em;
-  position: relative; /*absolute*/
-  left: 30vw;
+  position: absolute; /*absolute or relative*/
+  left: 20vw;
   top: 30vh;
   font-size: 11px;
   -webkit-transform: translateZ(0);
