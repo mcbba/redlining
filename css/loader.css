@@ -12,7 +12,7 @@
 .loader:after {
   position: absolute;
   top: 0;
-  content: 'loading';
+  content: '';
 }
 .loader:before {
   left: -1.5em;
