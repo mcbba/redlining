@@ -59,3 +59,8 @@
     height: 5em;
   }
 }
+.williamstext {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
