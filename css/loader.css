@@ -72,6 +72,8 @@
 #slider, ul
 {
 	height: 200px;
+	top: 30vh;
+	right: 20vw;
 }
 
 #slider
@@ -81,8 +83,6 @@
 	padding: 20px;
 	margin-top: 50px;
 	position: relative;
-	top: 30vh;
-	left: 10vw;
 	width: 600px;
 }
 
