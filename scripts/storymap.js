@@ -1,4 +1,5 @@
 $(window).on('load', function() {
+	
   var documentSettings = {};
 
   // Some constants, such as default setting
@@ -78,15 +79,24 @@ $(window).on('load', function() {
     if (!s || s.trim() === '') { return def; }
     return s;
   }
-
+  function addBaseMap() {
   /**
    * Loads the basemap and adds it to the map
    */
-  function addBaseMap() {
-    var basemap = trySetting('_tileProvider', 'Stamen.TonerLite');
-    L.tileLayer.provider(basemap, {
-      maxZoom: 14
-    }).addTo(map);
+ 
+	L.tileLayer('https://{s}.tile.thunderforest.com/pioneer/{z}/{x}/{y}.png?apikey={apikey}', {
+		attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		apikey: 'db5ae1f5778a448ca662554581f283c5',
+		maxZoom: 22
+	}).addTo(map);
+
+	L.tileLayer('tiles/{z}/{x}/{y}.png', {
+		maxZoom: 16,
+		minZoom: 6,
+		tms: false
+	}).addTo(map);
+	  
+//
   }
 
   function initMap(options, chapters) {
@@ -422,6 +432,9 @@ $(window).on('load', function() {
     for (i in markers) {
       if (markers[i]) {
         markers[i].addTo(map);
+	markers[i].bindTooltip("Pins do not represent <br> bird locations", {
+  				sticky: true
+  			});
         markers[i]['_pixelsAbove'] = pixelsAbove[i];
         markers[i].on('click', function() {
           var pixels = parseInt($(this)[0]['_pixelsAbove']) + 5;
